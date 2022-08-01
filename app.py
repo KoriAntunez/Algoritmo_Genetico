@@ -10,7 +10,7 @@ from utils import read_input
 st.set_page_config(layout="wide")
 
 """
-# AAlgoritmo Genético
+# Algoritmo Genético
 
 Algoritmo genético aplicado en encontrar el camino más óptimo dada una lista de coordenada de ciudades
 

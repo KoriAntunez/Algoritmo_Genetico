@@ -85,7 +85,7 @@ def genetic_tsp(dataset_name, num_generations, population_size, mutation_prob):
         best_distance = 1 / evaluate_fitness(best_solution)
 
         if gen % 10 == 0:
-            print(f"[Gen {gen}] - Current Distance: {best_distance}")
+            print(f"[Gen {gen}] - Distancia actual: {best_distance}")
 
     return best_solution, best_distance
 
@@ -97,4 +97,4 @@ best_solution, best_distance = genetic_tsp(
     mutation_prob=0.1,
 )
 
-print(f"Best distance: {best_distance}")
+print(f"Mejor dictancia: {best_distance}")

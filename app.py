@@ -10,37 +10,36 @@ from utils import read_input
 st.set_page_config(layout="wide")
 
 """
-# Genetic TSP
+# AAlgoritmo Genético
 
-Demo of genetic algorithm solver for the Traveling Salesman Problem.
+Algoritmo genético aplicado en encontrar el camino más óptimo dada una lista de coordenada de ciudades
 
-Feel free to play with the parameters in the sidebar and see how they impact the
-solution.
+Puede configurar los parámetro de la barra lateral para que pueda interactuar
 
 """
 
 with st.sidebar:
     select_dataset = st.selectbox(
-        label="Select a dataset",
+        label="Seleccione el dataset",
         options=("p01.in", "dj15.in", "dj38.in", "att48.in", "qa194.in"),
     )
 
     num_generations = st.number_input(
-        "Number of generations", min_value=10, max_value=5000, step=10
+        "Número de generaciones", min_value=10, max_value=5000, step=10
     )
 
     population_size = st.number_input(
-        "Population size", min_value=10, max_value=5000, step=10
+        "Tamaño de población", min_value=10, max_value=5000, step=10
     )
 
     mutation_prob = st.number_input(
-        "Mutation probability", min_value=0.0, max_value=1.0, value=0.1
+        "Probabilidad de mutación", min_value=0.0, max_value=1.0, value=0.1
     )
 
-    random_seed_checkbox = st.checkbox("Set a random seed?")
+    random_seed_checkbox = st.checkbox("Establecer una semilla aleatoria?")
 
     if random_seed_checkbox:
-        random_seed = st.number_input("Random seed", min_value=0, step=1, value=42)
+        random_seed = st.number_input("semilla aleatoria", min_value=0, step=1, value=42)
         random.seed(random_seed)
         np.random.seed(random_seed)
 

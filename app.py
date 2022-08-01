@@ -60,7 +60,7 @@ optimal_distances = {
     "qa194.in": 9352,
 }
 optimal_distance = st.write(
-    f"**Optimal Distance:** {optimal_distances[select_dataset]}"
+    f"**Distancia optima:** {optimal_distances[select_dataset]}"
 )
 
 col2.header("Distancia en el tiempo")

@@ -45,7 +45,7 @@ with st.sidebar:
 
 col1, col2 = st.beta_columns(2)
 
-col1.header("Best solution")
+col1.header("Mejor Solución")
 progress_bar = st.empty()
 current_distance = st.empty()
 plot = col1.empty()
@@ -63,8 +63,8 @@ optimal_distance = st.write(
     f"**Optimal Distance:** {optimal_distances[select_dataset]}"
 )
 
-col2.header("Distance over time")
-df = pd.DataFrame({"Distance": []})
+col2.header("Distancia en el tiempo")
+df = pd.DataFrame({"Distancia": []})
 chart = col2.empty()
 
 
@@ -86,5 +86,5 @@ current_distance.empty()
 cities = read_input(f"data/{select_dataset}")
 
 
-done.write("**Done**!")
+done.write("**Hecho**!")
 final_distance.write(f"**Final Distance:** {best_distance}")
